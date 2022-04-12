@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Box } from "@mui/system";
@@ -33,7 +33,7 @@ function ItemCount({stock, initial, onAdd}) {
             <IconButton onClick={increment}>
                 <AddIcon />
             </IconButton>
-            <Button variant="contained" onClick={add}>Añadir al carrito</Button>
+            <Button variant="contained" onClick={() => onAdd(count)}>Añadir al carrito</Button>
         </Box>
         </>
     )

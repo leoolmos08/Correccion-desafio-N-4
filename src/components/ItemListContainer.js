@@ -6,7 +6,7 @@ const { products } = require('../utils/products');
 
 const ItemListContainer = () => {
     const onAdd = (rta) => {
-        alert("Has seleccionado" + rta + "hamburguesas.");
+        alert("Has seleccionado  " + rta + "  hamburguesas.");
     }
 
     const [datos , setDatos] = useState([]);
@@ -20,7 +20,7 @@ const ItemListContainer = () => {
     return (
         <>
         <ItemList items={datos}/>
-        <ItemCount stock="5" initial="0" onAdd={onAdd} />
+        <ItemCount stock={5} initial={0} onAdd={onAdd} />
         </>
     );
 }
